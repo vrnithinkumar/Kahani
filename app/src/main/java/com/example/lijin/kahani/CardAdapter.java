@@ -5,17 +5,22 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
 import java.util.List;
 
-public class CardAdapter extends RecyclerView.Adapter<CardAdapter.StoryViewHolder> {
+public class CardAdapter extends RecyclerView.Adapter<CardAdapter.StoryViewHolder> implements Filterable {
 
     private List<StoryCard> storyCardList;
-
+    private List<StoryCard> mCardList;
+    public  CardFilterAdapter cFilter;
     public CardAdapter(List<StoryCard> storyCardList) {
         this.storyCardList = storyCardList;
+        this.mCardList=storyCardList;
     }
 
 
@@ -40,6 +45,14 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.StoryViewHolde
         return new StoryViewHolder(itemView);
     }
 
+    @Override
+    public Filter getFilter() {
+        if(cFilter==null){
+            cFilter=new CardFilterAdapter();
+        }
+        return cFilter;
+    }
+
     public static class StoryViewHolder extends RecyclerView.ViewHolder {
 
         protected TextView vTitle;
@@ -51,6 +64,35 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.StoryViewHolde
             vTitle =  (TextView) v.findViewById(R.id.titleText);
             vAuthor = (TextView)  v.findViewById(R.id.authorText);
             vPic = (ImageView)  v.findViewById(R.id.thumbnail_pic);
+        }
+    }
+
+    private class CardFilterAdapter extends Filter{
+        @Override
+        protected FilterResults performFiltering(CharSequence constraint) {
+            FilterResults results = new FilterResults();
+            if (constraint == null || constraint.length() == 0) {
+                results.values=storyCardList;
+                results.count=storyCardList.size();
+            }
+            else {
+                List<StoryCard> matchedStoryCardList= new ArrayList<StoryCard>();
+                for(StoryCard sc:mCardList){
+                    if (sc.title.toUpperCase().startsWith(constraint.toString().toUpperCase())
+                            ||sc.author.toUpperCase().startsWith(constraint.toString().toUpperCase())){
+                        matchedStoryCardList.add(sc);
+                    }
+                }
+                results.values=matchedStoryCardList;
+                results.count=matchedStoryCardList.size();
+            }
+            return results;
+        }
+
+        @Override
+        protected void publishResults(CharSequence constraint,FilterResults results) {
+            storyCardList=(List<StoryCard>)results.values;
+            notifyDataSetChanged();
         }
     }
 }

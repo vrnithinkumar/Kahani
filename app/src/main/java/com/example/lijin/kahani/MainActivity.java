@@ -1,6 +1,7 @@
 package com.example.lijin.kahani;
 
 import android.app.Fragment;
+import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -122,8 +123,9 @@ public class MainActivity extends ActionBarActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
+        if (id == R.id.action_search) {
+            Intent i =new Intent(this,SearchActivity.class);
+            startActivity(i);
         }
 
         return super.onOptionsItemSelected(item);
