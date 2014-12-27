@@ -18,8 +18,13 @@
         </activity>
         <activity
             android:name=".SearchActivity"
-            android:label="@string/title_activity_search"
-            >
+            android:label="@string/title_activity_search" >
+        </activity>
+        <activity
+            android:name=".ReaderActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_reader"
+            android:theme="@style/FullscreenTheme" >
         </activity>
     </application>
 

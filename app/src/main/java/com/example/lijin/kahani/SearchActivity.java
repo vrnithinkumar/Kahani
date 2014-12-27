@@ -34,14 +34,13 @@ public class SearchActivity extends Activity {
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         recList.setLayoutManager(llm);
 
-        final CardAdapter ca = new CardAdapter(createList(30));
+        final CardAdapter ca = new CardAdapter(createList(30),this);
         recList.setAdapter(ca);
         final EditText search=(EditText)findViewById(R.id.search_field);
         search.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
                 String text = search.getText().toString().toLowerCase(Locale.getDefault());
-                // adapter.filter(text);
             }
 
             @Override

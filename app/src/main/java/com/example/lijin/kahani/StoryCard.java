@@ -7,4 +7,5 @@ public class StoryCard {
     protected String title;
     protected String author;
     protected int imageid;
+    protected int id;
 }

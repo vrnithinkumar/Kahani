@@ -37,7 +37,7 @@ public class MyFragment extends Fragment {
         llm.setOrientation(LinearLayoutManager.VERTICAL);
         recList.setLayoutManager(llm);
 
-        CardAdapter ca = new CardAdapter(createList(30));
+        CardAdapter ca = new CardAdapter(createList(30),getActivity());
         recList.setAdapter(ca);
         return view;
     }

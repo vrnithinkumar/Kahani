@@ -1,6 +1,9 @@
 package com.example.lijin.kahani; /**
  * Created by LIJIN on 12/26/2014.
  */
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +12,7 @@ import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,9 +22,11 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.StoryViewHolde
     private List<StoryCard> storyCardList;
     private List<StoryCard> mCardList;
     public  CardFilterAdapter cFilter;
-    public CardAdapter(List<StoryCard> storyCardList) {
+    public Context mActivity;
+    public CardAdapter(List<StoryCard> storyCardList,Context mActivity) {
         this.storyCardList = storyCardList;
         this.mCardList=storyCardList;
+        this.mActivity=mActivity;
     }
 
 
@@ -30,10 +36,18 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.StoryViewHolde
     }
 
     @Override
-    public void onBindViewHolder(StoryViewHolder storyViewHolder, int i) {
-        StoryCard sc = storyCardList.get(i);
+    public void onBindViewHolder(StoryViewHolder storyViewHolder, final int i) {
+        final StoryCard sc = storyCardList.get(i);
         storyViewHolder.vTitle.setText(sc.title);
         storyViewHolder.vAuthor.setText(sc.author);
+        storyViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(mActivity,ReaderActivity.class);
+                i.putExtra("TITLE",sc.title);
+                mActivity.startActivity(i);
+            }
+        });
     }
 
     @Override
