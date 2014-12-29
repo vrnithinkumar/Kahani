@@ -46,7 +46,6 @@ public class StoryViewActivity extends ActionBarActivity {
                     view.setScaleX(scaleFactor);
                     view.setScaleY(scaleFactor);
 
-                    // Fade the page relative to its size.
                     view.setAlpha(MIN_ALPHA +
                             (scaleFactor - MIN_SCALE) /
                                     (1 - MIN_SCALE) * (1 - MIN_ALPHA));

@@ -43,7 +43,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.StoryViewHolde
         storyViewHolder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(mActivity,ReaderActivity.class);
+                Intent i = new Intent(mActivity,StoryViewActivity.class);
                 i.putExtra("TITLE",sc.title);
                 mActivity.startActivity(i);
             }

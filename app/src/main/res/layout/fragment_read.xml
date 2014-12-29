@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="Android 4.4 (API Level 19) introduces a new SYSTEM_UI_FLAG_IMMERSIVE flag for setSystemUiVisibility() that lets your app go truly full screen. This flag, when combined with the SYSTEM_UI_FLAG_HIDE_NAVIGATION and SYSTEM_UI_FLAG_FULLSCREEN flags, hides the navigation and status bars and lets your app capture all touch events on the screen.
+
+When immersive full-screen mode is enabled, your activity continues to receive all touch events. The user can reveal the system bars with an inward swipe along the region where the system bars normally appear. This clears the SYSTEM_UI_FLAG_HIDE_NAVIGATION flag (and the SYSTEM_UI_FLAG_FULLSCREEN flag, if applied) so the system bars become visible. This also triggers your View.OnSystemUiVisibilityChangeListener, if set. However, if you'd like the system bars to automatically hide again after a few moments, you can instead use the SYSTEM_UI_FLAG_IMMERSIVE_STICKY flag. Note that the sticky version of the flag doesn't trigger any listeners, as system bars temporarily shown in this mode are in a transient state.
+
+Figure 1 illustrates the different immersive mode states:
+
+"
+        android:id="@+id/reader_text"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

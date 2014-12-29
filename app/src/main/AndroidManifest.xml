@@ -26,6 +26,11 @@
             android:label="@string/title_activity_reader"
             android:theme="@style/FullscreenTheme" >
         </activity>
+        <activity
+            android:name=".StoryViewActivity"
+            android:label="@string/title_activity_story_view"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
     </application>
 
 </manifest>
