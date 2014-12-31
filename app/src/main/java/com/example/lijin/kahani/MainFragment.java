@@ -68,7 +68,7 @@ public class MainFragment extends Fragment {
         protected List<Story> doInBackground(Void... params) {
             if(myApiService==null){
                 StoryApi.Builder builder = new StoryApi.Builder(AndroidHttp.newCompatibleTransport(),
-                        new AndroidJsonFactory(), null).setRootUrl("http://10.0.2.2:8080/_ah/api/")
+                        new AndroidJsonFactory(), null).setRootUrl("https://carbide-pilot-811.appspot.com/_ah/api")
                         .setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
                             @Override
                             public void initialize(AbstractGoogleClientRequest<?> abstractGoogleClientRequest) throws IOException {

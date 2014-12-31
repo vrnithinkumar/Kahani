@@ -2,11 +2,46 @@
 <items version="2" >
 
     <item
+        jar="C:\Users\LIJIN\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.1.3\f6c3aed1cdfa21b5c1737c915186ea93a95a58bd\jackson-core-2.1.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="f6c3aed1cdfa21b5c1737c915186ea93a95a58bd">
+        <dex dex="C:\Users\LIJIN\AndroidStudioProjects\Kahani\app\build\intermediates\pre-dexed\debug\jackson-core-2.1.3-a882fbfd058aee13de63f0b7c7f341587dd18059.jar" />
+    </item>
+    <item
+        jar="C:\Users\LIJIN\AndroidStudioProjects\Kahani\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="C:\Users\LIJIN\AndroidStudioProjects\Kahani\app\build\intermediates\pre-dexed\debug\classes-5fd229b344625974a785f4391bef22a29f4d35ee.jar" />
+    </item>
+    <item
+        jar="C:\Users\LIJIN\AndroidStudioProjects\Kahani\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="C:\Users\LIJIN\AndroidStudioProjects\Kahani\app\build\intermediates\pre-dexed\debug\classes-10cc207a02b3e2120ee4ed86499d106f921b56a6.jar" />
+    </item>
+    <item
         jar="C:\Users\LIJIN\.gradle\caches\modules-2\files-2.1\com.google.api-client\google-api-client\1.19.0\6a21277d9bebe267b7ddee028b241eebc756c040\google-api-client-1.19.0.jar"
         jumboMode="false"
         revision="21.1.2"
         sha1="6a21277d9bebe267b7ddee028b241eebc756c040">
         <dex dex="C:\Users\LIJIN\AndroidStudioProjects\Kahani\app\build\intermediates\pre-dexed\debug\google-api-client-1.19.0-af4ee818ecfa8d4e97160d329ae69612a4fc667a.jar" />
+    </item>
+    <item
+        jar="C:\Users\LIJIN\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\1.3.9\40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf\jsr305-1.3.9.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf">
+        <dex dex="C:\Users\LIJIN\AndroidStudioProjects\Kahani\app\build\intermediates\pre-dexed\debug\jsr305-1.3.9-731ced3c2d80a76d23e6394de9529526e8bda1e1.jar" />
+    </item>
+    <item
+        jar="C:\Users\LIJIN\AndroidStudioProjects\Kahani\backend\build\libs\backend-android-endpoints.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1a450e2fd5dcb80f15c0bd7074b1103110ec84b5">
+        <dex dex="C:\Users\LIJIN\AndroidStudioProjects\Kahani\app\build\intermediates\pre-dexed\debug\backend-android-endpoints-d71c86e5da11a0cb013846ad7ba8b9b44d895bf8.jar" />
     </item>
     <item
         jar="C:\Users\LIJIN\AndroidStudioProjects\Kahani\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\21.0.3\classes.jar"
@@ -44,55 +79,6 @@
         <dex dex="C:\Users\LIJIN\AndroidStudioProjects\Kahani\app\build\intermediates\pre-dexed\debug\guava-jdk5-13.0-cc258798aec08e2edb1ab09f213540e7ea09ca01.jar" />
     </item>
     <item
-        jar="C:\Users\LIJIN\AndroidStudioProjects\Kahani\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
-        <dex dex="C:\Users\LIJIN\AndroidStudioProjects\Kahani\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-da8d2a1a25ef29de3b2de53af5084f30ea6f3035.jar" />
-    </item>
-    <item
-        jar="C:\Users\LIJIN\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-jackson2\1.19.0\81dbf9795d387d5e80e55346582d5f2fb81a42eb\google-http-client-jackson2-1.19.0.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="81dbf9795d387d5e80e55346582d5f2fb81a42eb">
-        <dex dex="C:\Users\LIJIN\AndroidStudioProjects\Kahani\app\build\intermediates\pre-dexed\debug\google-http-client-jackson2-1.19.0-8e6c218e747e8db0296d6942f8815ee7ea5a2cf6.jar" />
-    </item>
-    <item
-        jar="C:\Users\LIJIN\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.1.3\f6c3aed1cdfa21b5c1737c915186ea93a95a58bd\jackson-core-2.1.3.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="f6c3aed1cdfa21b5c1737c915186ea93a95a58bd">
-        <dex dex="C:\Users\LIJIN\AndroidStudioProjects\Kahani\app\build\intermediates\pre-dexed\debug\jackson-core-2.1.3-a882fbfd058aee13de63f0b7c7f341587dd18059.jar" />
-    </item>
-    <item
-        jar="C:\Users\LIJIN\AndroidStudioProjects\Kahani\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
-        <dex dex="C:\Users\LIJIN\AndroidStudioProjects\Kahani\app\build\intermediates\pre-dexed\debug\classes-5fd229b344625974a785f4391bef22a29f4d35ee.jar" />
-    </item>
-    <item
-        jar="C:\Users\LIJIN\AndroidStudioProjects\Kahani\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
-        <dex dex="C:\Users\LIJIN\AndroidStudioProjects\Kahani\app\build\intermediates\pre-dexed\debug\classes-10cc207a02b3e2120ee4ed86499d106f921b56a6.jar" />
-    </item>
-    <item
-        jar="C:\Users\LIJIN\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\1.3.9\40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf\jsr305-1.3.9.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf">
-        <dex dex="C:\Users\LIJIN\AndroidStudioProjects\Kahani\app\build\intermediates\pre-dexed\debug\jsr305-1.3.9-731ced3c2d80a76d23e6394de9529526e8bda1e1.jar" />
-    </item>
-    <item
-        jar="C:\Users\LIJIN\AndroidStudioProjects\Kahani\backend\build\libs\backend-android-endpoints.jar"
-        jumboMode="false"
-        revision="21.1.2"
-        sha1="7c369fd68a6a1490cec0a58e01f655ad66a57c2f">
-        <dex dex="C:\Users\LIJIN\AndroidStudioProjects\Kahani\app\build\intermediates\pre-dexed\debug\backend-android-endpoints-d71c86e5da11a0cb013846ad7ba8b9b44d895bf8.jar" />
-    </item>
-    <item
         jar="D:\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
         jumboMode="false"
         revision="21.1.2"
@@ -112,6 +98,20 @@
         revision="21.1.2"
         sha1="d473a8962e14a707a3716637e4898bb2dd9643f2">
         <dex dex="C:\Users\LIJIN\AndroidStudioProjects\Kahani\app\build\intermediates\pre-dexed\debug\google-oauth-client-1.19.0-f852471f2f2c03f1126000993225d6284588f771.jar" />
+    </item>
+    <item
+        jar="C:\Users\LIJIN\AndroidStudioProjects\Kahani\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="C:\Users\LIJIN\AndroidStudioProjects\Kahani\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-da8d2a1a25ef29de3b2de53af5084f30ea6f3035.jar" />
+    </item>
+    <item
+        jar="C:\Users\LIJIN\.gradle\caches\modules-2\files-2.1\com.google.http-client\google-http-client-jackson2\1.19.0\81dbf9795d387d5e80e55346582d5f2fb81a42eb\google-http-client-jackson2-1.19.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81dbf9795d387d5e80e55346582d5f2fb81a42eb">
+        <dex dex="C:\Users\LIJIN\AndroidStudioProjects\Kahani\app\build\intermediates\pre-dexed\debug\google-http-client-jackson2-1.19.0-8e6c218e747e8db0296d6942f8815ee7ea5a2cf6.jar" />
     </item>
 
 </items>

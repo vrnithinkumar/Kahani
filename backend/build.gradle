@@ -35,6 +35,7 @@ appengine {
     downloadSdk = true
     appcfg {
         oauth2 = true
+        email = "lijinc100@gmail.com"
     }
     endpoints {
         serviceClasses = [ 'com.example.LIJIN.myapplication.backend.StoryEndpoint']
