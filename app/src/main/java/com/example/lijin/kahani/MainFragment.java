@@ -1,5 +1,7 @@
 package com.example.lijin.kahani;
 
+import android.content.Context;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -7,8 +9,18 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.example.lijin.myapplication.backend.storyApi.StoryApi;
+import com.example.lijin.myapplication.backend.storyApi.model.Story;
+import com.google.api.client.extensions.android.http.AndroidHttp;
+import com.google.api.client.extensions.android.json.AndroidJsonFactory;
+import com.google.api.client.googleapis.services.AbstractGoogleClientRequest;
+import com.google.api.client.googleapis.services.GoogleClientRequestInitializer;
+
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -16,6 +28,7 @@ import java.util.List;
  */
 public class MainFragment extends Fragment {
 
+    CardAdapter ca=null;
     // newInstance constructor for creating fragment with arguments
     public static MainFragment newInstance() {
         MainFragment fragmentMain = new MainFragment();
@@ -36,24 +49,45 @@ public class MainFragment extends Fragment {
         RecyclerView recList = (RecyclerView) view.findViewById(R.id.card_list_main);
         LinearLayoutManager llm = new LinearLayoutManager(getActivity());
         llm.setOrientation(LinearLayoutManager.VERTICAL);
+        List<Story> s=new ArrayList<Story>();
+        ca=new CardAdapter(s,getActivity());
         recList.setLayoutManager(llm);
-
-        CardAdapter ca = new CardAdapter(createList(30),getActivity());
         recList.setAdapter(ca);
+        new StoryListAsyncTask(getActivity()).execute();
         return view;
     }
-    private List<StoryCard> createList(int size) {
 
-        List<StoryCard> result = new ArrayList<StoryCard>();
-        for (int i=1; i <= size; i++) {
-            StoryCard ci = new StoryCard();
-            ci.title = "dd" + i;
-            ci.author ="dffdff" + i;
-
-            result.add(ci);
-
+    public class StoryListAsyncTask  extends AsyncTask<Void, Void, List<Story>> {
+        private StoryApi myApiService=null;
+        private Context context;
+        StoryListAsyncTask(Context context){
+            this.context=context;
         }
 
-        return result;
+        @Override
+        protected List<Story> doInBackground(Void... params) {
+            if(myApiService==null){
+                StoryApi.Builder builder = new StoryApi.Builder(AndroidHttp.newCompatibleTransport(),
+                        new AndroidJsonFactory(), null).setRootUrl("http://10.0.2.2:8080/_ah/api/")
+                        .setGoogleClientRequestInitializer(new GoogleClientRequestInitializer() {
+                            @Override
+                            public void initialize(AbstractGoogleClientRequest<?> abstractGoogleClientRequest) throws IOException {
+                                abstractGoogleClientRequest.setDisableGZipContent(true);
+                            }
+                        });
+                myApiService = builder.build();
+            }
+            try {
+                return myApiService.list().execute().getItems();
+            }catch (IOException e) {
+                return Collections.EMPTY_LIST;
+            }
+        }
+        @Override
+        protected void onPostExecute(List<Story> result) {
+            ca.setList(result);
+        }
+
+
     }
 }

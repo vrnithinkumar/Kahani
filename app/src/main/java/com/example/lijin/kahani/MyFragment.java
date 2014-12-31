@@ -7,7 +7,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import com.example.lijin.myapplication.backend.storyApi.model.Story;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -41,13 +41,13 @@ public class MyFragment extends Fragment {
         recList.setAdapter(ca);
         return view;
     }
-    private List<StoryCard> createList(int size) {
+    private List<Story> createList(int size) {
 
-        List<StoryCard> result = new ArrayList<StoryCard>();
+        List<Story> result = new ArrayList<Story>();
         for (int i=1; i <= size; i++) {
-            StoryCard ci = new StoryCard();
-            ci.title = "dd" + i;
-            ci.author ="dffdff" + i;
+            Story ci = new Story();
+            ci.setTitle( "dd" + i);
+            ci.setAuthor("dffdff" + i);
 
             result.add(ci);
 

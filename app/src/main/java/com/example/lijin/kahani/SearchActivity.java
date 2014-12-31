@@ -17,7 +17,7 @@ import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
-
+import com.example.lijin.myapplication.backend.storyApi.model.Story;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -77,13 +77,13 @@ public class SearchActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
-    private List<StoryCard> createList(int size) {
+    private List<Story> createList(int size) {
 
-        List<StoryCard> result = new ArrayList<StoryCard>();
+        List<Story> result = new ArrayList<Story>();
         for (int i=1; i <= size; i++) {
-            StoryCard ci = new StoryCard();
-            ci.title = "dd" + i;
-            ci.author ="dffdff" + i;
+            Story ci = new Story();
+            ci.setTitle( "dd" + i);
+            ci.setAuthor("dffdff" + i);
 
             result.add(ci);
 
