@@ -49,7 +49,7 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.StoryViewHolde
             @Override
             public void onClick(View v) {
                 Intent i = new Intent(mActivity,StoryViewActivity.class);
-                i.putExtra("TITLE",sc.getTitle());
+                i.putExtra("STORYID",sc.getId());
                 mActivity.startActivity(i);
             }
         });

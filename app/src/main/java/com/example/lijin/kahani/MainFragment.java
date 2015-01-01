@@ -1,5 +1,6 @@
 package com.example.lijin.kahani;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -27,7 +28,6 @@ import java.util.List;
  * Created by LIJIN on 12/26/2014.
  */
 public class MainFragment extends Fragment {
-
     CardAdapter ca=null;
     // newInstance constructor for creating fragment with arguments
     public static MainFragment newInstance() {
@@ -60,8 +60,16 @@ public class MainFragment extends Fragment {
     public class StoryListAsyncTask  extends AsyncTask<Void, Void, List<Story>> {
         private StoryApi myApiService=null;
         private Context context;
+        private ProgressDialog dialog;
         StoryListAsyncTask(Context context){
             this.context=context;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            dialog= new ProgressDialog(context);
+            dialog.setMessage("Please wait");
+            dialog.show();
         }
 
         @Override
@@ -85,6 +93,9 @@ public class MainFragment extends Fragment {
         }
         @Override
         protected void onPostExecute(List<Story> result) {
+            if (dialog.isShowing()) {
+                dialog.dismiss();
+            }
             ca.setList(result);
         }
 

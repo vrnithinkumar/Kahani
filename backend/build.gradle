@@ -38,7 +38,7 @@ appengine {
         email = "lijinc100@gmail.com"
     }
     endpoints {
-        serviceClasses = [ 'com.example.LIJIN.myapplication.backend.StoryEndpoint']
+        serviceClasses = [ 'com.example.LIJIN.myapplication.backend.StoryEndpoint','com.example.LIJIN.myapplication.backend.StoryContentEndpoint']
         getClientLibsOnBuild = true
         getDiscoveryDocsOnBuild = true
     }

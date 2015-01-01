@@ -14,7 +14,8 @@
         <init-param>
             <param-name>services</param-name>
             <param-value>com.example.LIJIN.myapplication.backend.MyEndpoint,
-                com.example.LIJIN.myapplication.backend.StoryEndpoint</param-value>
+                com.example.LIJIN.myapplication.backend.StoryEndpoint,
+                com.example.LIJIN.myapplication.backend.StoryContentEndpoint</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>
