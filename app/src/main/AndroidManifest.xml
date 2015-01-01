@@ -23,16 +23,11 @@
             android:label="@string/title_activity_search" >
         </activity>
         <activity
-            android:name=".ReaderActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:label="@string/title_activity_reader"
-            android:theme="@style/FullscreenTheme" >
-        </activity>
-        <activity
             android:name=".StoryViewActivity"
             android:label="@string/title_activity_story_view"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" >
         </activity>
+
     </application>
 
 </manifest>
