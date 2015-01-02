@@ -13,7 +13,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.EditText;
 
+import com.example.lijin.myapplication.backend.storyApi.StoryApi;
 import com.example.lijin.myapplication.backend.storyApi.model.Story;
 import com.example.lijin.myapplication.backend.storyContentApi.StoryContentApi;
 import com.google.api.client.extensions.android.http.AndroidHttp;
@@ -25,6 +27,7 @@ import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.util.Collections;
+import java.util.List;
 
 
 public class StoryViewActivity extends ActionBarActivity {
@@ -100,6 +103,9 @@ public class StoryViewActivity extends ActionBarActivity {
         }
 
     }
+
+
+
 
     public class StoryAsyncTask  extends AsyncTask<Void, Void, String> {
         private StoryContentApi myApiService=null;

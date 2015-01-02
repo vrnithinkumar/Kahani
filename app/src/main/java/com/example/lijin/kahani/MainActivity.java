@@ -128,6 +128,10 @@ public class MainActivity extends ActionBarActivity {
             Intent i =new Intent(this,SearchActivity.class);
             startActivity(i);
         }
+        else if(id==R.id.action_add){
+            Intent i =new Intent(this,AddActivity.class);
+            startActivity(i);
+        }
 
         return super.onOptionsItemSelected(item);
     }
